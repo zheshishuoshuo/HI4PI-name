@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+  
+  #matrix {
+    display: grid;
+    grid-template-columns: repeat(18, 4vw); /* 增大格子尺寸 */
+    grid-gap: 5px; /* 增大格子间隔，以保持视觉一致性 */
+    padding: 20px;
+    background: rgba(255, 182, 193, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* 单个格子的背景为半透明白色 */
+    font-weight: 700;
+    color: #ab4f7d; /* 粉色文字 */
+    transition: background-color 0.3s, transform 0.3s; /* 更新以包含transform */
+    height: 3vw; /* 根据需要调整格子的高度 */
+    font-size: 1vw; /* 调整字体大小以适应格子 */
+  }
+  
+  .cell:hover {
+    background-color: rgba(255, 105, 180, 0.8); /* 悬停时更深的粉色背景 */
+    transform: translateY(-2px); /* 轻微上移 */
+  }
+  
+  #info {
+    margin-top: 20px;
+    text-align: center;
+    color: #6a6969; /* 粉色文字 */
+    font-size: 25px;
+    position: absolute;
+    bottom: 110px; /* 调整这个值以控制距底部的具体位置 */
+    width: 100%;
+  }
+
+  
+  footer {
+    position: absolute;
+    bottom: 10px; /* 靠近页面底部 */
+    width: 100%;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #FF69B4; /* 版权信息使用粉色文字 */
+    text-decoration: none; /* 可选：移除下划线 */
+  }
